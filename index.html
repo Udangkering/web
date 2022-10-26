@@ -13,10 +13,26 @@
 <body>
     <script src="script.js"></script>
     <script type="text/javascript">
-    if(window.confirm("Selamat datang dan falling in love with you❤️🥰"))
-     {
-       play();
-     };
+    var today = new Date();var date = today.getDate()+'/'+(today.getMonth()+1)+'/'+today.getFullYear()+'.';var dateTime = date;
+    var swals = Swal
+    async function mulai(){
+                var { value: nama } = await swals.fire({
+                    title: 'Nama kamu?',
+                    input: 'text',
+                    confirmButtonText: 'Lanjut',
+                    allowOutsideClick: false,
+                    showCancelButton: false,
+                });                           
+                if(nama){
+                  play();
+                  await swals.fire(`Hai, ${nama}! &#10084;&#65039;`);
+                  await swals.fire(`Sekarang lihat ini ya &#10084;&#65039;`);
+                } else {
+                    await swals.fire('Isi namanya ayanggg');
+                    await swals.fire('Gak boleh kosong');
+                    mulai();
+                }
+            }
     </script>
     <section class="animated-background">
         <div id="stars1"></div>
