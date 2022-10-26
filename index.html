@@ -29,6 +29,7 @@
                   play();
                   await swals.fire(`Hai, ${nama}! &#10084;&#65039;`);
                   await swals.fire(`Sekarang lihat ini ya &#10084;&#65039;`);
+                  showDiv();
                 } else {
                     await swals.fire('Isi namanya ayanggg');
                     await swals.fire('Gak boleh kosong');
@@ -37,6 +38,7 @@
             }
             mulai()
     </script>
+    <div id='Content' style="display:none">
     <section class="animated-background">
         <div id="stars1"></div>
         <div id="stars2"></div>
@@ -96,7 +98,7 @@
     <div id="hashtag">
         Dibuat dengan ❤ by Jauhari
     </div>
-
+    </div>
 </body>
 
 </html>
